@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.prenav{
+    background-color: #e6007e;
+    color:white;
+    width: 100%;
+height: 50px;
+display: flex;
+justify-content: space-evenly;
+padding-top: 15px;
+}
+.order{
+    width: 25%;
+    padding-left: 5%;
+}
+.contact{
+    width: 25%;
+}
+marquee{
+    width: 50% ;
+}
+
+.navbar3{
+    display: flex;
+    
+    justify-content: center;
+    
+    gap: 20px;
+   list-style: none;
+   font-size: 17px;
+   font-weight: 500;
+
+}
+.swiper{ margin-top: 20px;
+
+}
+.minus{
+    font-size: 30px;
+    padding: 1px;
+}
+
+.plus{
+    font-size: 30px;
+    padding: 1px;
+}
+
+.prenav2{
+    display: flex;
+}
+.logo{
+    margin-left: 45%;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    margin-left: 35%;
+    font-size: 25px;
+    gap: 10px;
+    
+    
+    
+    
+   
+}
+.minus,.plus{
+   padding: 15px; 
+}
+.color{
+    text-decoration: none !important;
+    color: black;
+}
+.productsdisply{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly ;
+}
