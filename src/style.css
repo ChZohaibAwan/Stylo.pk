@@ -12,6 +12,7 @@ height: 50px;
 display: flex;
 justify-content: space-evenly;
 padding-top: 15px;
+
 }
 .order{
     width: 25%;
@@ -77,4 +78,10 @@ marquee{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly ;
+}
+.gewelery{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content:space-around
 }
