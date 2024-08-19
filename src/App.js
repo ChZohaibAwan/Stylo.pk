@@ -20,7 +20,6 @@ import Apicalling from "./components/Apicalling";
 import 'bootstrap/dist/css/bootstrap.css';
 
 
-
 function App() {
   return (
     <>
@@ -36,6 +35,8 @@ function App() {
         <Route path="/Kids" element={<Kids />} />
         <Route path="/Accessories" element={<Accessories />} />
         <Route path="/Fragrnces" element={<Fragrnces />} />
+        <Route path="/Product" element= {<product/>} />
+        
       </Routes>
 
       <ToastContainer

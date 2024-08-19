@@ -15,6 +15,7 @@ const apiFun=async()=>{
 apiFun()
   })
   return (
+    
 <div className="productsdisply">
   {
     products.map((product)=>{
@@ -28,7 +29,9 @@ apiFun()
       </div>)
     })
   }
-</div>  )
+</div>  
+
+)
 }
 
 export default EidCollection
