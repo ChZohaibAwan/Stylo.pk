@@ -1,37 +1,59 @@
-import { useEffect,useState} from "react"
-import axios from 'axios'
-
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import Loader from "../components/Loader";
+import { Link } from "react-router-dom";
 
 const EidCollection = () => {
-  const[products,setProducts]=useState([])
+  const [products, setProducts] = useState([]);
+  const [loader, setLoader] = useState(false);
 
+  const fetchData = async () => {
+    setLoader(true);
+    const response = await axios.get("https://fakestoreapi.com/products");
+    setProducts(response.data);
+    setLoader(false);
+  };
 
-const apiFun=async()=>{
-  const Result= await axios.get("https://fakestoreapi.com/products")
-  setProducts(Result.data)
+  useEffect(() => {
+    fetchData();
+  }, []); // No change needed here
 
-}
-  useEffect(()=>{
-apiFun()
-  })
   return (
-    
-<div className="productsdisply">
-  {
-    products.map((product)=>{
-      return(<div class="card" style={{width: "18rem"}}>
-      <img  src={product.image}  style={{height:"100px",width:"100px"}} alt="..."/> 
-        <div class="card-body">
-          <h5 class="card-title">{product.title}</h5>
-          <p class="card-text">{product.description.slice(0,30)+"..."}</p>
-          <a href="#" class="btn btn-primary">{product.price}</a>
+    <>
+      {loader ? (
+        <Loader />
+      ) : (
+        
+        <div className="Card">
+          {products.map((product) => (
+            <Link to={`/Products/${product.id}`}>
+            <div key={product.id} className="card" style={{ width: "28rem" }}>
+              <img
+                src={product.image}
+                className="card-img-top"
+                style={{ width: "100px", height: "100px" }}
+                alt={product.title}
+              />
+              <div className="card-body">
+                <h5 className="card-title">
+                  {product.title.slice(0, 50) + "..."}
+                </h5>
+                <p className="card-text">
+                  {product.description.slice(0, 50) + "..."}
+                </p>
+                <h5 className="card-price">Rs {product.price}</h5>
+                <h5 className="card-price">
+                  Sold Items: {product.rating.count}
+                </h5>
+              </div>
+            </div>
+            </Link>
+          ) )}
         </div>
-      </div>)
-    })
-  }
-</div>  
+      
+      )}
+    </>
+  );
+};
 
-)
-}
-
-export default EidCollection
+export default EidCollection;
