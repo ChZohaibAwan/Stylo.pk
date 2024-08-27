@@ -3,7 +3,9 @@ import axios from "axios";
 import Loader from "../components/Loader";
 import { Link } from "react-router-dom";
 
+
 const EidCollection = () => {
+  
   const [products, setProducts] = useState([]);
   const [loader, setLoader] = useState(false);
 
