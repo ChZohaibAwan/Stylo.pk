@@ -1,21 +1,28 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Prenav3 = () => {
   return (
     
     
     <div >
+      <div className="menu">
+      <span></span>
+      <span></span>
+      <span></span>
+      
+       
+      </div>
       <ul className='navbar3' >
-        <li style={{color:'red'}}> <Link className="color"  to={"/home"}> Sale </Link> </li>
-        <li> <Link className="color" to={"/EidCollection"}> Eid || Collection </Link></li>
-        <li>  <Link className="color" to={"/Summer24"}> Summer 24 </Link> </li>
-        <li>  <Link className="color" to={"/Womenshoes"}> Women Shoes </Link> </li>
-        <li><Link className="color" to={"/Womenapperal"}> Women Apperal </Link> </li>
-        <li><Link className="color" to={"/Bags"}> Bags </Link> </li>
-        <li><Link className="color" to={"/Kids"}> Kids </Link> </li>
-        <li><Link className="color"  to={"/Accessories"}> Accessories </Link> </li>
-        <li><Link className="color"  to={"/Fragrnces"}> Fragrences </Link> </li>
+        <li style={{color:'red'}}> <NavLink className="color"  to={"/"}> Sale </NavLink> </li>
+        <li> <NavLink className="color" to={"/EidCollection"}> Eid || Collection </NavLink></li>
+        <li>  <NavLink className="color" to={"/Summer24"}> Summer 24 </NavLink> </li>
+        <li>  <NavLink className="color" to={"/Womenshoes"}> Women Shoes </NavLink> </li>
+        <li><NavLink className="color" to={"/Womenapperal"}> Women Apperal </NavLink> </li>
+        <li><NavLink className="color" to={"/Bags"}> Bags </NavLink> </li>
+        <li><NavLink className="color" to={"/Kids"}> Kids </NavLink> </li>
+        <li><NavLink className="color"  to={"/Accessories"}> Accessories </NavLink> </li>
+        <li><NavLink className="color"  to={"/Fragrnces"}> Fragrences </NavLink> </li>
       </ul>
   
     </div>
