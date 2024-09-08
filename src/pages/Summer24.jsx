@@ -12,6 +12,7 @@ useEffect(()=>{
   
 })
   return (
+    
     <div className='gewelery'>
       {products.map((product)=>{
         return(<div className="card" style={{width: "18rem"}}>

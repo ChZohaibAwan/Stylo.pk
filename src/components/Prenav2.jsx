@@ -9,8 +9,8 @@ import { CiShoppingCart } from "react-icons/ci";
 const Prenav2 = () => {
   return (
     <>
-    <div className="prenav2">
-   <div className="logo"><img src='https://stylo.pk/cdn/shop/files/110x60-Logo_45_140x.png?v=1705411679'/></div>
+    <nav className="prenav2">
+   <div className="logo" style={{width: "10px"}}><img src='https://stylo.pk/cdn/shop/files/110x60-Logo_45_140x.png?v=1705411679'/></div>
    <div className="icons">
     <div className="icon1"><CiSearch />
     </div>
@@ -21,7 +21,7 @@ const Prenav2 = () => {
     <div className="icon3"><CiShoppingCart />
     </div>
    </div>
-    </div>
+    </nav>
     
 
     </>

@@ -21,15 +21,18 @@ const EidCollection = () => {
   }, []); // No change needed here
 
   return (
-    <>
+    <>   
       {loader ? (
         <Loader />
       ) : (
-        
+       
         <div className="Card">
+          
           {products.map((product) => (
             <Link to={`/Products/${product.id}`}>
+        
             <div key={product.id} className="card" style={{ width: "28rem" }}>
+          
               <img
                 src={product.image}
                 className="card-img-top"

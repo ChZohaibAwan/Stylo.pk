@@ -5,16 +5,16 @@ const Prenav3 = () => {
   return (
     
     
-    <div >
+    <nav >
       <div className="menu">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span>A</span>
+      <span>A</span>
+      <span>A</span>
       
        
       </div>
       <ul className='navbar3' >
-        <li style={{color:'red'}}> <NavLink className="color"  to={"/"}> Sale </NavLink> </li>
+        <li > <NavLink className="color"  to={"/"}> Sale </NavLink> </li>
         <li> <NavLink className="color" to={"/EidCollection"}> Eid || Collection </NavLink></li>
         <li>  <NavLink className="color" to={"/Summer24"}> Summer 24 </NavLink> </li>
         <li>  <NavLink className="color" to={"/Womenshoes"}> Women Shoes </NavLink> </li>
@@ -25,7 +25,7 @@ const Prenav3 = () => {
         <li><NavLink className="color"  to={"/Fragrnces"}> Fragrences </NavLink> </li>
       </ul>
   
-    </div>
+    </nav>
   )
 }
 

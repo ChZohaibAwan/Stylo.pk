@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Slider from "./Slider";
+
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
@@ -41,16 +42,20 @@ const Home = () => {
 
   return (
     <>
+   
     <div>
       <Slider />
     </div>
       {loader ? (
         <Loader />
-      ) : (
+      ) : ( 
+        <> 
+        <h1 className="TopTrending">Top Trending</h1>
         <Carousel responsive={responsive}>
           {products.map((product) => (
             <div key={product.id} style={{ padding: '1rem', textAlign: 'center' }}>
               <Link to={`/Products/${product.id}`}> 
+             
                 <img
                   src={product.image}
                   alt={product.title}
@@ -71,6 +76,7 @@ const Home = () => {
             </div>
           ))}
         </Carousel>
+        </>
       )}
     </>
   );
